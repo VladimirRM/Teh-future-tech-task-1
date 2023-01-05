@@ -9,8 +9,23 @@ function App() {
 
   const [booksData,setBooksData]= useState([])
 React.useEffect(()=>{
-  
-})
+    getData()
+},[])
+
+
+async function   getData (){
+  await axios.get('./types/books.json')
+  .then(response =>{
+    setBooksData(response.data)
+    })
+      .catch(err=>{
+        console.log(err);
+        
+      })
+
+}
+console.log(booksData);
+
 
 
   return (
