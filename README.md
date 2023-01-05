@@ -1,1 +1,0 @@
-# Teh-future-tech-task-1
